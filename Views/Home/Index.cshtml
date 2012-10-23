@@ -1,0 +1,38 @@
+﻿<header>
+</header>
+<section class="container">
+    <h1>Grocery List</h1>
+    <div id="form">
+        <div class="form-inline">
+            <input type="text" name="newitem" id="newitem" class="input-large" placeholder="grocery item" />
+            <input type="button" name="addnew" id="addnew" value="Add" class="btn btn-primary" />
+        </div>
+    </div>
+    <div id="list">
+        <ul id="grocerylist"></ul>
+    </div>
+
+    <div id="cleardeleted"><a href="javascript:void(0);">clear completed items</a></div>
+</section>
+<script type="text/x-handlebars-template" id="grocery-template">
+    {{#results}}
+        <div class="section">
+        {{#if Section}}
+        <div class="sectionname">{{Section}}</div>
+        {{else}}
+        <div class="sectionname">Uncategorized</div>
+        {{/if}}
+        {{#Items}}
+        <li>
+            <div class="itemview{{#if Done}} done{{/if}}"><input type="checkbox" class="itemchecked" {{#if Done}}checked{{/if}} /> {{Item}}</div>
+            <div class="itemedit hidden">
+                <input type="hidden" class="itemid" value="{{Id}}" />
+                <input type="text" class="input-medium changeitem" value="{{Item}}" />
+                <input type="text" class="input-small changesection" value="{{Section}}" />
+                <input type="button" value="Save" class="itemupdate btn btn-primary" />
+            </div>
+        </li>
+        {{/Items}}
+        </div>
+    {{/results}}
+</script>

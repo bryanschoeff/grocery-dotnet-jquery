@@ -1,0 +1,11 @@
+﻿#form { text-align: center; }
+    #form div { margin-bottom: 20px; }
+section.container { width: 300px; }
+ul#grocerylist { margin: 0; padding: 0; }
+    ul#grocerylist li { list-style: none; padding: 5px 10px; border-bottom: 1px solid #eee; cursor: pointer; }
+.section { background: #fff; }
+    .section:nth-child(2n) { background: #fff; }
+.section .sectionname { background: #eef; color: #333; padding: 3px; }
+input.itemchecked { margin: 5px; }
+.hidden { display: none; }
+.done { text-decoration: line-through; color: #aaa; }
